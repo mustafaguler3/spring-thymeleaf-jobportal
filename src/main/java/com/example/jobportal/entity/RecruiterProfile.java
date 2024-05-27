@@ -30,6 +30,11 @@ public class RecruiterProfile {
     @JoinColumn(name = "user_id")
     private User user;
 
+    @Transient
+    public String getPhotosImagePath(){
+        if (profilePhoto == null) return null;
+        return "/photo/recruiter/"+id + "/"+profilePhoto;
+    }
 }
 
 

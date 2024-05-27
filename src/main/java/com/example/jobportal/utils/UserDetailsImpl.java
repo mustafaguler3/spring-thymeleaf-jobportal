@@ -28,7 +28,7 @@ public class UserDetailsImpl implements UserDetails {
     // return the roles for this user
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        UserType userType = user.getUserType();
+        UserType userType = user.getUserTypeId();
         List<SimpleGrantedAuthority> authorities = new ArrayList<>();
         authorities.add(new SimpleGrantedAuthority(userType.getUserTypeName()));
 

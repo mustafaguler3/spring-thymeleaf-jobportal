@@ -17,11 +17,9 @@ public class UserType {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
-
+    private int userTypeId;
     private String userTypeName;
-
-    @OneToMany(mappedBy = "userType",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "userTypeId",cascade = CascadeType.ALL)
     private List<User> users;
 }
 

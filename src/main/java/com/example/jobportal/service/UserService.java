@@ -39,7 +39,7 @@ public class UserService {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         User savedUser = userRepository.save(user);
 
-        int userTypeId = user.getUserType().getId();
+        int userTypeId = user.getUserTypeId().getUserTypeId();
         if (userTypeId == 1){
             recruiterProfileRepository.save(new RecruiterProfile(savedUser));
         }else {
