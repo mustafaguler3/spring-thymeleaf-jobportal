@@ -34,6 +34,7 @@ public class JobSeekerProfile {
     public JobSeekerProfile(User user) {
         this.user = user;
     }
+
 }
 
 

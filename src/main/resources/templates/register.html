@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org" lang="tr">
 <head>
     <link
             th:rel="stylesheet"
@@ -85,12 +85,12 @@
                                         <select
                                                 required
                                                 class="form-control"
-                                                th:field="*{userTypeId}"
+                                                th:field="*{user_type_id}"
                                         >
                                             <th:block th:each="userType :${getAllTypes}">
                                                 <option
                                                         th:text="${userType.userTypeName}"
-                                                        th:value="${userType.userTypeId}"
+                                                        th:value="${userType.id}"
                                                 ></option>
                                             </th:block>
                                         </select>

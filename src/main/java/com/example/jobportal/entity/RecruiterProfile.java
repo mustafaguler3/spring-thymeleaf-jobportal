@@ -1,9 +1,6 @@
 package com.example.jobportal.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,6 +8,10 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class RecruiterProfile {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
 
     private String firstName;
     private String lastName;
@@ -28,6 +29,7 @@ public class RecruiterProfile {
     @OneToOne
     @JoinColumn(name = "user_id")
     private User user;
+
 }
 
 

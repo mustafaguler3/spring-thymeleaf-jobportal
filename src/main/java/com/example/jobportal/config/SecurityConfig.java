@@ -66,7 +66,7 @@ public class SecurityConfig {
 
     //tell spring security how to authenticate passwords (plain text or encryption)
     @Bean
-    private PasswordEncoder passwordEncoder(){
+    public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     }
 }
