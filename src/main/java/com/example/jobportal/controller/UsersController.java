@@ -42,7 +42,7 @@ public class UsersController {
     @PostMapping("/register/new")
     public String userRegister(@Valid @ModelAttribute User user){
         userService.addNew(user);
-        return "dashboard";
+        return "redirect:/dashboard/";
     }
     @GetMapping("/login")
     public String login(){
