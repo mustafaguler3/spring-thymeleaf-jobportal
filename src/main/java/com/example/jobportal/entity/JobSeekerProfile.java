@@ -12,7 +12,7 @@ import java.util.List;
 public class JobSeekerProfile {
 
     @Id
-    private int userAccountId;
+    private Integer userAccountId;
 
     private String firstName;
     private String lastName;
@@ -33,6 +33,13 @@ public class JobSeekerProfile {
 
     public JobSeekerProfile(User user) {
         this.user = user;
+    }
+
+    public String getPhotosImagePath(){
+        if (profilePhoto == null || userAccountId == null){//we changed int value to Integer
+            return null;
+        }
+        return "/photos/candidate/"+ userAccountId+"/"+profilePhoto;
     }
 
 }
