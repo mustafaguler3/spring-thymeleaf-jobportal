@@ -35,6 +35,7 @@ public class JobSeekerProfile {
         this.user = user;
     }
 
+    @Transient
     public String getPhotosImagePath(){
         if (profilePhoto == null || userAccountId == null){//we changed int value to Integer
             return null;
