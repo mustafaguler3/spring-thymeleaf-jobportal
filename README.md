@@ -6,6 +6,8 @@ used technologies ->
 *Hibernate
 *MySQL
 
+![img_5.png](img_5.png)
+
 ![img_3.png](img_3.png)
 
 ![img.png](img.png)

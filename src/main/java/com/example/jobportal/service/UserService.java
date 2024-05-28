@@ -78,6 +78,10 @@ public class UserService {
         }
         return null;
     }
+
+    public User findByEmail(String currentUsername) {
+        return userRepository.findByEmail(currentUsername).orElseThrow(() -> new UsernameNotFoundException("User not found"));
+    }
 }
 
 
