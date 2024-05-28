@@ -13,19 +13,16 @@ import java.util.Date;
 @NoArgsConstructor
 public class JobPostActivity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer jobPostId;
-
     @ManyToOne
     @JoinColumn(name = "postedById")
     private User postedById;
-
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "jobLocationId")
     private JobLocation jobLocationId;
-
-    @ManyToOne
-    @JoinColumn(name = "jobCompanyId")
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "jobCompanyId",referencedColumnName = "id")
     private JobCompany jobCompanyId;
     @Transient
     private Boolean isActive;
@@ -33,7 +30,6 @@ public class JobPostActivity {
     private Boolean isSaved;
     @Length(max = 10000)
     private String descriptionOfJob;
-
     private String jobType;
     private String salary;
     private String remote;
