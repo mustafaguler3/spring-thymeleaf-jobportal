@@ -73,7 +73,7 @@ public class JobSeekerProfileController {
 
         if (!(authentication instanceof AnonymousAuthenticationToken)){
             User user = userRepository.findByEmail(authentication.getName()).orElseThrow(()->new UsernameNotFoundException("User not found"));
-            jobSeekerProfile.setUser(user);
+            jobSeekerProfile.setUserId(user);
             jobSeekerProfile.setUserAccountId(user.getUserId());
         }
 

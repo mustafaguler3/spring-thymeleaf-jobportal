@@ -34,7 +34,7 @@ public class UserService {
     }
 
     public User addNew(User user){
-        user.setActive(true);
+        user.setIsActive(true);
         user.setRegistrationDate(new Date(System.currentTimeMillis()));
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         User savedUser = userRepository.save(user);

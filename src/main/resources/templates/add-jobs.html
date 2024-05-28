@@ -22,7 +22,6 @@
             </h2>
         </div>
     </div>
-
     <div class="col-md-7 container myForm">
         <form id="job-main-form" th:action="@{/dashboard/addNew}" th:object="${jobPostActivity}" method="post" class="job-add-form">
             <input hidden type="text" th:field="*{jobPostId}" >
