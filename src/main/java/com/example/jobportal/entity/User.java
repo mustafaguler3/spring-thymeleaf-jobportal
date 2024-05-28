@@ -23,7 +23,6 @@ public class User {
     private boolean isActive;
     @DateTimeFormat(pattern = "dd-MM-yyyy")
     private Date registrationDate;
-
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "userTypeId")
     private UserType userTypeId;

@@ -36,6 +36,22 @@ public class JobPostActivity {
     @DateTimeFormat(pattern = "dd-MM-yyyy")
     private Date postedDate;
     private String jobTitle;
+
+    public Boolean getActive() {
+        return isActive;
+    }
+
+    public void setActive(Boolean active) {
+        isActive = active;
+    }
+
+    public Boolean getSaved() {
+        return isSaved;
+    }
+
+    public void setSaved(Boolean saved) {
+        isSaved = saved;
+    }
 }
 
 
